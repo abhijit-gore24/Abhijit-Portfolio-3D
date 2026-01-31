@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhijit Gore | Software Developer Portfolio</title>
+    <meta name="description"
+        content="Premium 3D interactive portfolio of Abhijit Gore - Software Developer specializing in modern web technologies, cloud solutions, and enterprise applications.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- GSAP for scroll animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 3D Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-logo">
+            <span class="logo-text">AG</span>
+        </div>
+        <div class="nav-links">
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Scroll Container -->
+    <div class="scroll-container">
+
+        <!-- Section 1: Hero -->
+        <section id="hero" class="section hero-section">
+            <div class="section-content">
+                <div class="hero-content">
+                    <div class="glitch-wrapper">
+                        <h1 class="hero-name" data-text="ABHIJIT GORE">ABHIJIT GORE</h1>
+                    </div>
+                    <p class="hero-subtitle">Full Stack Developer | AWS Certified | 3.5 Years of Experience</p>
+                    <div class="hero-tags">
+                        <span class="tag">Full Stack</span>
+                        <span class="tag">AWS Certified</span>
+                        <span class="tag">Angular & React Expert</span>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="cta-button primary">View My Work</a>
+                        <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: About Me -->
+        <section id="about" class="section about-section">
+            <div class="section-content">
+                <h2 class="section-title">About Me</h2>
+                <div class="glass-card about-card">
+                    <div class="about-content">
+                        <div class="hologram-image">
+                            <div class="hologram-border"></div>
+                            <img src="profile.jpg" alt="Abhijit Gore - Software Developer" class="profile-photo">
+                        </div>
+                        <div class="about-text">
+                            <h3>Building the Future, One Line at a Time</h3>
+                            <p>Full Stack Developer with 3.5 years of experience building high-performance, scalable
+                                applications using Angular, React, TypeScript, and Spring Boot. AWS Certified
+                                professional specializing in creating clean, responsive UIs with Tailwind CSS and
+                                Angular Material, backed by robust APIs and cloud deployments.</p>
+                            <p>Currently working at Synechron Technologies, where I've reduced manual processing time by
+                                60%, improved application stability by 40%, and consistently deliver production-ready
+                                features in Agile environments. Recognized as Star Performer and Employee of the Month
+                                for delivering high-impact solutions.</p>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <div class="stat-number">3.5</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">11</div>
+                                    <div class="stat-label">Certifications</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">3</div>
+                                    <div class="stat-label">Major Projects</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Experience -->
+        <section id="experience" class="section experience-section">
+            <div class="section-content">
+                <h2 class="section-title">Professional Experience</h2>
+                <div class="experience-timeline">
+                    <!-- Synechron -->
+                    <div class="timeline-item left">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card experience-card">
+                            <span class="experience-date">Sep 2022 – Present</span>
+                            <h3>Associate Software Developer</h3>
+                            <div class="experience-details">
+                                <span class="experience-company">Synechron Technologies</span>
+                                <span><i class="fas fa-map-marker-alt"></i> Pune, India</span>
+                            </div>
+                            <ul>
+                                <li>Developed a secure and efficient user entitlement solution, reducing manual
+                                    processing time by 60% and significantly enhancing user experience.</li>
+                                <li>Improved development efficiency by collaborating with backend developers and API
+                                    teams, employing Agile methodologies.</li>
+                                <li>Increased application stability by designing and executing comprehensive unit tests,
+                                    decreasing deployment errors by 40%.</li>
+                                <li>Implemented data validation processes using Angular Reactive Forms, increasing data
+                                    accuracy and integrity by 30%.</li>
+                                <li>Optimized code performance through refactoring, reducing load times by 25%.</li>
+                                <li>Created authentication mechanisms to establish secure, role-based access control for
+                                    both internal and external users.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- JPMorgan -->
+                    <div class="timeline-item right">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card experience-card">
+                            <span class="experience-date">Apr 2022 – Sep 2022</span>
+                            <h3>Software Developer Intern</h3>
+                            <div class="experience-details">
+                                <span class="experience-company">JPMorgan Chase & Co.</span>
+                                <span><i class="fas fa-laptop-house"></i> Remote</span>
+                            </div>
+                            <ul>
+                                <li>Developed reusable UI components to improve consistency and reduce development time
+                                    by 20%.</li>
+                                <li>Contributed to frontend development by utilizing HTML, CSS, and JavaScript to
+                                    enhance user interfaces, improving usability and performance due to optimization.
+                                </li>
+                                <li>Built cloud-based applications on AWS, enabling scalable and efficient service
+                                    deployment.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Skills & Tech Stack -->
+        <section id="skills" class="section skills-section">
+            <div class="section-content">
+                <h2 class="section-title">Tech Stack & Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-angular"></i>
+                        </div>
+                        <h3>Angular</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h3>React</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-java"></i>
+                        </div>
+                        <h3>Java</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-node"></i>
+                        </div>
+                        <h3>TypeScript</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Spring Boot</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>AWS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-wind"></i>
+                        </div>
+                        <h3>Tailwind CSS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-bootstrap"></i>
+                        </div>
+                        <h3>Bootstrap</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>MySQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>NgRx / Redux</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Next.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-git-alt"></i>
+                        </div>
+                        <h3>Git</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3>Three.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-stream"></i>
+                        </div>
+                        <h3>RxJS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>GraphQL</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h3>Jest</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-sass"></i>
+                        </div>
+                        <h3>SASS/LESS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-box-open"></i>
+                        </div>
+                        <h3>Webpack</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub Actions</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>D3.js</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card glass-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tools</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <p style="font-size: 0.8rem; color: var(--color-text-secondary); margin-top: 0.5rem;">Jira,
+                            Postman, Figma, Maven</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Certifications -->
+        <section id="certifications" class="section certifications-section">
+            <div class="section-content">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-gallery">
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>AWS Certified DevOps Engineer - Professional</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="cert-year">Dec 2024</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>AWS Certified Solutions Architect - Associate</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="cert-year">Sep 2024</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <h3>AWS Certified Developer - Associate</h3>
+                        <p>Amazon Web Services</p>
+                        <span class="cert-year">Aug 2024</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft Certified Developer - Associate</h3>
+                        <p>Microsoft</p>
+                        <span class="cert-year">Aug 2023</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h3>Microsoft Certified: Azure AI Engineer Associate</h3>
+                        <p>Microsoft Azure</p>
+                        <span class="cert-year">Oct 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Oracle AI Vector Search Certified Professional</h3>
+                        <p>Oracle</p>
+                        <span class="cert-year">Oct 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>OCI 2025 Certified AI Foundations Associate</h3>
+                        <p>Oracle Cloud Infrastructure</p>
+                        <span class="cert-year">Oct 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>OCI 2025 Certified Generative AI Professional</h3>
+                        <p>Oracle Cloud Infrastructure</p>
+                        <span class="cert-year">Oct 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Databricks Generative AI Fundamentals</h3>
+                        <p>Databricks Academy</p>
+                        <span class="cert-year">Sep 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Databricks Certified Generative AI Engineer Associate</h3>
+                        <p>Databricks</p>
+                        <span class="cert-year">Sep 2025</span>
+                    </div>
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h3>Level-Up: JavaScript</h3>
+                        <p>Udemy</p>
+                        <span class="cert-year">Apr 2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Projects -->
+        <section id="projects" class="section projects-section">
+            <div class="section-content">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/abhijit-gore24" class="project-link" target="_blank"><i
+                                            class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Onboarded Resource Management Tool</h3>
+                            <p>Developed a full-stack application to streamline employee onboarding, using Angular with
+                                PrimeNG for an interactive UI and integrated state management via NgRx. Built backend
+                                APIs with Spring Boot to handle user management, document processing, and role-based
+                                access.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">PrimeNG</span>
+                                <span class="tech-tag">NgRx</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/abhijit-gore24" class="project-link" target="_blank"><i
+                                            class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Food Order App</h3>
+                            <p>Developed a responsive Food Order Web App using React.js. Implemented component-based
+                                architecture with functional components and React Hooks. Designed user-friendly UI using
+                                CSS3 and Tailwind CSS. Enabled form validation and smooth user interactions.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Redux</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">REST APIs</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://github.com/abhijit-gore24" class="project-link" target="_blank"><i
+                                            class="fab fa-github"></i> Code</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>LinkedIn Job Apply Bot</h3>
+                            <p>Built a Node.js automation bot using Puppeteer to auto-login into LinkedIn and apply to
+                                multiple "Easy Apply" job postings. Implemented browser automation workflows and
+                                integrated audio feedback using Play-Sound. Reduced manual job application time
+                                significantly.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Puppeteer</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Resume -->
+        <section id="resume" class="section resume-section">
+            <div class="section-content">
+                <h2 class="section-title">Resume</h2>
+                <div class="resume-viewer glass-card">
+                    <div class="document-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Download My Resume</h3>
+                    <p>Get a comprehensive overview of my experience, skills, and accomplishments.</p>
+                    <a href="./resume.pdf" class="download-btn" download="Abhijit_Gore_Resume.pdf"
+                        id="download-resume-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                    <div class="resume-preview">
+                        <div class="preview-line"></div>
+                        <div class="preview-line short"></div>
+                        <div class="preview-line"></div>
+                        <div class="preview-line medium"></div>
+                        <div class="preview-line"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Social Profiles -->
+        <section id="social" class="section social-section">
+            <div class="section-content">
+                <h2 class="section-title">Connect With Me</h2>
+                <div class="social-grid">
+                    <a href="https://github.com/abhijit-gore24" target="_blank" class="social-card glass-card">
+                        <div class="social-icon github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>View my open source contributions and projects</p>
+                        <span class="social-handle">@abhijit-gore24</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/abhijit-gore-5a71b4180/" target="_blank"
+                        class="social-card glass-card">
+                        <div class="social-icon linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Connect with me professionally</p>
+                        <span class="social-handle">Abhijit Gore</span>
+                    </a>
+
+                    <a href="https://www.hackerrank.com/profile/abhijitagore2000" target="_blank"
+                        class="social-card glass-card">
+                        <div class="social-icon hackerrank">
+                            <i class="fab fa-hackerrank"></i>
+                        </div>
+                        <h3>HackerRank</h3>
+                        <p>Check out my coding challenges</p>
+                        <span class="social-handle">@abhijitagore2000</span>
+                    </a>
+
+                    <a href="https://medium.com/@abhijitagore2000" target="_blank" class="social-card glass-card">
+                        <div class="social-icon medium">
+                            <i class="fab fa-medium"></i>
+                        </div>
+                        <h3>Medium</h3>
+                        <p>Read my tech articles and blog series</p>
+                        <span class="social-handle">@abhijitagore2000</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Contact -->
+        <section id="contact" class="section contact-section">
+            <div class="section-content">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container glass-card">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn-close"></span>
+                            <span class="btn-minimize"></span>
+                            <span class="btn-maximize"></span>
+                        </div>
+                        <div class="terminal-title">contact@abhijitgore.dev</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> start_conversation.sh
+                        </div>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">
+                                    <span class="prompt">$</span> enter_name:
+                                </label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">
+                                    <span class="prompt">$</span> enter_email:
+                                </label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">
+                                    <span class="prompt">$</span> enter_message:
+                                </label>
+                                <textarea id="message" name="message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span class="prompt">$</span> send_message --now
+                            </button>
+                        </form>
+                        <div class="terminal-line success" id="success-message" style="display: none;">
+                            <span class="prompt">✓</span> Message sent successfully!
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>abhijitagore2000@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8605341106</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pune, Maharashtra, India</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
