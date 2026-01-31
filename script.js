@@ -446,42 +446,32 @@ function setupContactForm() {
 
 
 // === RESUME DOWNLOAD ===
+// Disabled - using direct Google Drive link instead
+/*
 function setupResumeDownload() {
     const downloadBtn = document.getElementById('download-resume-btn');
 
     if (downloadBtn) {
-        downloadBtn.addEventListener('click', async (e) => {
-            // Check if the resume file exists
-            try {
-                const response = await fetch('./Abhijit-Full-Stack-Dev-Resume.pdf', { method: 'HEAD' });
+        downloadBtn.addEventListener('click', (e) => {
+            // Google Drive link opens in new tab, show visual feedback
+            console.log('📄 Opening resume from Google Drive...');
 
-                if (!response.ok) {
-                    e.preventDefault();
-                    alert('Resume file is not available yet. Please contact me directly at abhijitagore2000@gmail.com');
-                    console.error('Resume file not found');
-                    return;
-                }
+            // Add visual feedback
+            const originalText = downloadBtn.innerHTML;
+            downloadBtn.innerHTML = '<i class="fas fa-check"></i> Opening...';
+            downloadBtn.style.pointerEvents = 'none';
 
-                // File exists, download will proceed automatically
-                console.log('📄 Downloading resume...');
-
-                // Add visual feedback
-                const originalText = downloadBtn.innerHTML;
-                downloadBtn.innerHTML = '<i class="fas fa-check"></i> Downloaded!';
-                downloadBtn.style.pointerEvents = 'none';
-
-                setTimeout(() => {
-                    downloadBtn.innerHTML = originalText;
-                    downloadBtn.style.pointerEvents = 'auto';
-                }, 2000);
-
-            } catch (error) {
-                e.preventDefault();
-                alert('Error downloading resume. Please contact me directly at abhijitagore2000@gmail.com');
-                console.error('Error checking resume file:', error);
-            }
+            setTimeout(() => {
+                downloadBtn.innerHTML = originalText;
+                downloadBtn.style.pointerEvents = 'auto';
+            }, 2000);
         });
     }
+}
+*/
+function setupResumeDownload() {
+    // No-op function - direct Google Drive link handles download
+    console.log('📄 Resume download uses direct Google Drive link');
 }
 
 
