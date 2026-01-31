@@ -384,25 +384,66 @@ function setupContactForm() {
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
 
-    form.addEventListener('submit', (e) => {
+    // Initialize EmailJS with your public key
+    // You'll need to replace this with your actual EmailJS public key
+    emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Simulate form submission
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalBtnText = submitBtn.innerHTML;
 
-        console.log('Form submitted:', data);
+        // Show loading state
+        submitBtn.innerHTML = '<span class="prompt">$</span> sending...';
+        submitBtn.disabled = true;
 
-        // Show success message
-        successMessage.style.display = 'flex';
-        form.reset();
+        try {
+            // Get form data
+            const formData = {
+                from_name: form.querySelector('#name').value,
+                from_email: form.querySelector('#email').value,
+                message: form.querySelector('#message').value,
+                to_email: 'abhijitagore2000@gmail.com'
+            };
 
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successMessage.style.display = 'none';
-        }, 5000);
+            // Send email using EmailJS
+            // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
+            const response = await emailjs.send(
+                'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
+                'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
+                formData
+            );
+
+            console.log('✅ Email sent successfully:', response);
+
+            // Show success message
+            successMessage.style.display = 'flex';
+            form.reset();
+
+            // Reset button
+            submitBtn.innerHTML = '<span class="prompt">$</span> message sent ✓';
+
+            // Hide success message and reset button after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }, 5000);
+
+        } catch (error) {
+            console.error('❌ Failed to send email:', error);
+
+            // Show error message
+            alert('Sorry, there was an error sending your message. Please email me directly at abhijitagore2000@gmail.com');
+
+            // Reset button
+            submitBtn.innerHTML = originalBtnText;
+            submitBtn.disabled = false;
+        }
     });
 }
+
 
 // === RESUME DOWNLOAD ===
 function setupResumeDownload() {
@@ -412,7 +453,7 @@ function setupResumeDownload() {
         downloadBtn.addEventListener('click', async (e) => {
             // Check if the resume file exists
             try {
-                const response = await fetch('./resume.pdf', { method: 'HEAD' });
+                const response = await fetch('./Abhijit-Full-Stack-Dev-Resume.pdf', { method: 'HEAD' });
 
                 if (!response.ok) {
                     e.preventDefault();
@@ -442,6 +483,7 @@ function setupResumeDownload() {
         });
     }
 }
+
 
 // === PARTICLE INTERACTIONS ===
 function setupParticleInteractions() {
